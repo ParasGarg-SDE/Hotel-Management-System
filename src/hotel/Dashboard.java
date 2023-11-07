@@ -49,7 +49,7 @@ public class Dashboard extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-//                    new AddEmployee().setVisible(true);
+                    new AddEmployee().setVisible(true);
                 } catch (Exception e) {
                 }
             }
@@ -61,7 +61,7 @@ public class Dashboard extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-//                    new AddRoom().setVisible(true);
+                    new AddRoom().setVisible(true);
                 } catch (Exception e) {
                 }
             }
@@ -70,7 +70,7 @@ public class Dashboard extends JFrame {
         receptionMenuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                new Reception();
+                new Reception();
             }
         });
 
@@ -80,7 +80,7 @@ public class Dashboard extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-//                    new AddDrivers().setVisible(true);
+                    new AddDrivers().setVisible(true);
                 } catch (Exception e) {
                 }
             }

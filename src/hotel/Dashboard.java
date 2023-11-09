@@ -23,7 +23,7 @@ public class Dashboard extends JFrame {
         imageLabel.setBounds(0, 0, 1950, 1000);
         add(imageLabel);
 
-        JLabel titleLabel = new JLabel("THE TAJ GROUP WELCOMES YOU");
+        JLabel titleLabel = new JLabel("THE PARAS GROUP WELCOMES YOU");
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setFont(new Font("Tahoma", Font.PLAIN, 46));
         titleLabel.setBounds(600, 60, 1000, 85);

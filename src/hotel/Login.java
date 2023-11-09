@@ -52,10 +52,11 @@ public class Login extends JFrame implements ActionListener {
         cancelButton = new JButton("Cancel");
         cancelButton.setBounds(180, 140, 120, 30);
         cancelButton.setFont(new Font("serif", Font.BOLD, 15));
-        cancelButton.addActionListener(this);
         cancelButton.setBackground(Color.BLACK);
         cancelButton.setForeground(Color.WHITE);
         add(cancelButton);
+
+        cancelButton.addActionListener(this);
 
 
         getContentPane().setBackground(Color.WHITE);
@@ -72,18 +73,19 @@ public class Login extends JFrame implements ActionListener {
                 String username = usernameTextField.getText();
                 String password = passwordField.getText();
 
-                String loginQuery = "select * from login where username='" + username + "' and password='" + password + "'";
-
-                ResultSet resultSet = connect.statement.executeQuery(loginQuery);
+                String sqlQuery = "select * from login where username = '" + username + "' and password = '" + password + "'";
+                ResultSet resultSet = connect.statement.executeQuery(sqlQuery);
                 if (resultSet.next()) {
-//                    new Dashboard().setVisible(true);
-                    setVisible(false);
+                    new Dashboard().setVisible(true);
+                    this.setVisible(false);
                 } else {
-                    JOptionPane.showMessageDialog(null, "Invalid login");
-                    setVisible(false);
+                    JOptionPane.showMessageDialog(null, "Invalid Login");
+                    usernameTextField.setText("");
+                    passwordField.setText("");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
+                System.out.println("error: " + e);
             }
         } else if (actionEvent.getSource() == cancelButton) {
             System.exit(0);
@@ -91,6 +93,6 @@ public class Login extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new Login();
+        new Login().setVisible(true);
     }
 }

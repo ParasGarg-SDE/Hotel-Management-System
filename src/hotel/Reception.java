@@ -81,8 +81,8 @@ public class Reception extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-                    CustomerInfo customer = new CustomerInfo();
-                    customer.setVisible(true);
+                    CustomerInfo customerInfo = new CustomerInfo();
+                    customerInfo.setVisible(true);
                     setVisible(false);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -116,8 +116,8 @@ public class Reception extends JFrame {
         checkOutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                CheckOut check = new CheckOut();
-                check.setVisible(true);
+                CheckOut checkOut = new CheckOut();
+                checkOut.setVisible(true);
                 setVisible(false);
             }
         });
@@ -131,8 +131,8 @@ public class Reception extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-                    UpdateCheck update = new UpdateCheck();
-                    update.setVisible(true);
+                    UpdateCheck updateCheck = new UpdateCheck();
+                    updateCheck.setVisible(true);
                     setVisible(false);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -149,8 +149,8 @@ public class Reception extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-                    UpdateRoom room = new UpdateRoom();
-                    room.setVisible(true);
+                    UpdateRoom updateRoom = new UpdateRoom();
+                    updateRoom.setVisible(true);
                     setVisible(false);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -167,8 +167,8 @@ public class Reception extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-                    PickUp pick = new PickUp();
-                    pick.setVisible(true);
+                    PickUp pickUp = new PickUp();
+                    pickUp.setVisible(true);
                     setVisible(false);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -185,8 +185,8 @@ public class Reception extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-                    SearchRoom search = new SearchRoom();
-                    search.setVisible(true);
+                    SearchRoom searchRoom = new SearchRoom();
+                    searchRoom.setVisible(true);
                     setVisible(false);
                 } catch (Exception e) {
                     e.printStackTrace();

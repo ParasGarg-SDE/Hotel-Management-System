@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import net.proteanit.sql.DbUtils;
 
 public class Room extends JFrame {
@@ -14,7 +15,7 @@ public class Room extends JFrame {
     private JPanel panel;
     private JTable roomTable;
     private JLabel availabilityLabel, cleanStatusLabel, priceLabel, bedTypeLabel, roomNumberLabel;
-    JButton loadDataButton, backButton;
+    JButton loadRoomsButton, backButton;
 
     public Room() throws SQLException {
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -35,8 +36,8 @@ public class Room extends JFrame {
         roomTable.setBounds(0, 40, 500, 400);
         panel.add(roomTable);
 
-        loadDataButton = new JButton("Load Data");
-        loadDataButton.addActionListener(new ActionListener() {
+        loadRoomsButton = new JButton("Load Rooms");
+        loadRoomsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
@@ -49,10 +50,10 @@ public class Room extends JFrame {
                 }
             }
         });
-        loadDataButton.setBounds(100, 470, 120, 30);
-        loadDataButton.setBackground(Color.BLACK);
-        loadDataButton.setForeground(Color.WHITE);
-        panel.add(loadDataButton);
+        loadRoomsButton.setBounds(100, 470, 120, 30);
+        loadRoomsButton.setBackground(Color.BLACK);
+        loadRoomsButton.setForeground(Color.WHITE);
+        panel.add(loadRoomsButton);
 
         backButton = new JButton("Back");
         backButton.addActionListener(new ActionListener() {
